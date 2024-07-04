@@ -1,0 +1,35 @@
+.cardHeader {
+  padding: 1.2125rem 1.3125rem;
+  margin-bottom: 0;
+  background-color: transparent;
+  border-bottom: 0.0625rem solid rgba(231, 234, 243, 0.7);
+}
+.cardTitle {
+  margin-top: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1e2022;
+}
+
+.listGroupItem {
+  position: relative;
+  display: block;
+  padding: 1rem;
+  color: #1e2022;
+  background-color: #fff;
+  border: 0.0625rem solid #e7eaf3;
+}
+.listGroupItem:first-child {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.textMutedLink {
+  color: #377dff !important;
+}
+.chartContainer {
+  height: 320px;
+  width: 100% !important;
+}
+.customNavSegment {
+  padding: 0.25rem 0.25rem !important;
+}

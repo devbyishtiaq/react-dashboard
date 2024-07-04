@@ -1,0 +1,52 @@
+.notificationsHeader {
+  padding: 1.3125rem 1.3125rem;
+  margin-bottom: 0;
+  background-color: transparent;
+  border-bottom: 0.0625rem solid rgba(231, 234, 243, 0.7);
+}
+.notificationsFooter {
+  padding: 1.3125rem 1.3125rem;
+  margin-bottom: 0;
+  background-color: transparent;
+  border-top: 0.0625rem solid rgba(231, 234, 243, 0.7);
+}
+
+/* notification-dropdown.module.css */
+
+.navTabs {
+  borderbottom: "0.0625rem solid rgba(231, 234, 243, 0.7)";
+  padding: "0";
+  display: "flex";
+  justifycontent: "space-between";
+}
+.navItem {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navLink {
+  padding: 1rem 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  color: #132144;
+}
+.activeNavLink {
+  color: #377dff !important;
+  border-bottom: 0.1875rem solid #377dff !important;
+}
+.customListGroup {
+  padding-right: 0 !important;
+}
+.customListGroupItem {
+  background-color: #f8faff;
+}
+.customBlockquote {
+  font-size: 0.875rem;
+  padding-left: 0.6125rem;
+}
+.customInputCheck {
+  border-radius: 50% !important;
+}

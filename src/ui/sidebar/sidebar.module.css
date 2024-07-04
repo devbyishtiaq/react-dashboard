@@ -1,0 +1,22 @@
+.customNavLink {
+  color: #132144 !important;
+}
+.activeCustomNavLink {
+  color: #377dff !important;
+}
+.customAside {
+  border-width: 0 0.0625rem 0 0;
+  border-style: solid;
+  border-color: rgba(231, 234, 243, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  transition: 0.2s ease-in-out;
+}
+.customAsideClosed {
+}
+.customnavlink:hover .nav-collapse {
+  display: block !important;
+}
