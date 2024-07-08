@@ -1,5 +1,6 @@
 import React from "react";
 import MainContent from "../components/homepage/main-content";
+import Project from "../pages/project";
 
 /**
  * Array of routes for the dashboard section.
@@ -8,4 +9,5 @@ import MainContent from "../components/homepage/main-content";
 export const routes = [
   // public
   { path: "/", element: <MainContent /> },
+  { path: "/project", element: <Project /> },
 ];

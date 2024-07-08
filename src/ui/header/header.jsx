@@ -32,7 +32,7 @@ const Header = ({ collapsed, setCollapsed }) => {
 
       <div className="navbar-nav-wrap-content-start d-flex">
         {/* Navbar Vertical Toggle */}
-        <button
+        {/* <button
           type="button"
           className={`js-navbar-vertical-aside-toggle-invoker navbar-aside-toggler ${styles.customNavbarToggler}`}
         >
@@ -42,7 +42,7 @@ const Header = ({ collapsed, setCollapsed }) => {
             data-bs-placement="right"
             title="Expand"
           ></i>
-        </button>
+        </button> */}
         {/* End Navbar Vertical Toggle */}
 
         {/* Search Form */}
@@ -203,7 +203,7 @@ const Header = ({ collapsed, setCollapsed }) => {
       </div>
 
       <div className="navbar-nav-wrap-content-end ms-auto">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav" style={{ flexDirection: "row" }}>
           <li className="nav-item d-none d-sm-inline-block">
             <NotificationDropdown />
           </li>
@@ -347,13 +347,10 @@ const Header = ({ collapsed, setCollapsed }) => {
               </div>
             </div>
           </li>
-          <li className="nav-item d-none d-sm-inline-block">
+          <li className="nav-item d-none d-sm-inline-block me-2">
             <button
               className="btn btn-ghost-secondary btn-icon rounded-circle"
               type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasActivityStream"
-              aria-controls="offcanvasActivityStream"
             >
               <i className="bi-x-diamond"></i>
             </button>
