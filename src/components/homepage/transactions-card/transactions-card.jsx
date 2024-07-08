@@ -76,12 +76,12 @@ const TransactionsCard = () => {
     <div className="card h-100">
       <div className={`card-header-content-between ${styles.cardHeader}`}>
         <h4 className="card-header-title mb-2 mb-sm-0">Transactions</h4>
-        <button className="btn btn-ghost-secondary btn-sm dropdown-toggle">
+        {/* <button className="btn btn-ghost-secondary btn-sm dropdown-toggle">
           <i className="bi-calendar-week"></i>
           <span className="js-daterangepicker-predefined-preview ms-1">
             Jul 1 - Jul 1, 2024
           </span>
-        </button>
+        </button> */}
       </div>
       <div className="card-body">
         <div className="chartjs-custom mx-auto" style={{ height: "20rem" }}>

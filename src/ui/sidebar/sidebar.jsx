@@ -1,8 +1,11 @@
+import { Link, useLocation } from "react-router-dom";
 import logoShort from "../../assets/svg/logos/logo-short.svg";
 import logo from "../../assets/svg/logos/logo.svg";
 import styles from "./sidebar.module.css";
 
 function Sidebar({ collapsed, setCollapsed }) {
+  const location = useLocation();
+
   const toggleCollapse = (section) => {
     setCollapsed({ ...collapsed, [section]: !collapsed[section] });
   };
@@ -86,7 +89,9 @@ function Sidebar({ collapsed, setCollapsed }) {
                     collapsed.dashboards
                       ? styles.activeCustomNavLink
                       : styles.customNavLink
-                  } active ${styles.dropdownToggle}`}
+                  } ${styles.dropdownToggle} ${
+                    location.pathname === "/" ? "active" : ""
+                  }`}
                   href="#navbarVerticalMenuDashboards"
                   role="button"
                   onClick={() => toggleCollapse("dashboards")}
@@ -113,12 +118,15 @@ function Sidebar({ collapsed, setCollapsed }) {
                     collapsed.main ? "hiden" : ""
                   } ${collapsed.dashboards ? "show" : ""}`}
                 >
-                  <span
-                    className={`nav-link active `}
+                  <Link
+                    to="/"
+                    className={`nav-link ${
+                      location.pathname === "/" ? "active" : ""
+                    }`}
                     style={{ color: "#132144", cursor: "pointer" }}
                   >
                     Default
-                  </span>
+                  </Link>
                   <span
                     className="nav-link"
                     style={{ color: "#132144", cursor: "pointer" }}
@@ -145,15 +153,16 @@ function Sidebar({ collapsed, setCollapsed }) {
               ></small>
 
               <div className="nav-item">
-                <a
+                <span
                   className={`nav-link dropdown-toggle ${
                     collapsed.main ? "afterNone" : ""
                   } ${
                     collapsed.project
                       ? styles.activeCustomNavLink
                       : styles.customNavLink
-                  } ${styles.dropdownToggle}`}
-                  href="#navbarVerticalMenuPagesProjectMenu"
+                  } ${styles.dropdownToggle} ${
+                    location.pathname.startsWith("/project") ? "active" : ""
+                  }`}
                   role="button"
                   onClick={() => toggleCollapse("project")}
                   aria-expanded={collapsed.project}
@@ -171,7 +180,7 @@ function Sidebar({ collapsed, setCollapsed }) {
                   >
                     Project
                   </span>
-                </a>
+                </span>
                 <div
                   id="navbarVerticalMenuPagesProjectMenu"
                   style={collapsed.main ? dropdownStyles : {}}
@@ -179,12 +188,15 @@ function Sidebar({ collapsed, setCollapsed }) {
                     collapsed.main ? "hiden" : ""
                   } ${collapsed.project ? "show" : ""}`}
                 >
-                  <span
-                    className="nav-link"
+                  <Link
+                    to="/project"
+                    className={`nav-link ${
+                      location.pathname === "/project" ? "active" : ""
+                    }`}
                     style={{ color: "#132144", cursor: "pointer" }}
                   >
                     Overview
-                  </span>
+                  </Link>
                 </div>
               </div>
             </div>
